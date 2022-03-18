@@ -1,7 +1,11 @@
+import Inicar from "./Iniciar";
+import Perguntas from "./Perguntas";
+
 function App() {
     return (
         <>
-        <h1>OLÁ REACT</h1>
+        {/* <Inicar/> */}
+        <Perguntas/>
         </>
     )
 }
