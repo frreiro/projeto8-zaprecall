@@ -1,12 +1,14 @@
-export default function CartaResposta() {
+export default function CartaResposta(props) {
+    const { resposta, retornarCarta} = props
+
+
     return (
         <section className="carta-virada">
-            <h1>JSX é uma sintaxe para
-                escrever HTML dentro do JS</h1>
+            <h1>{resposta}</h1>
             <div>
-                <button className="fundo-vermelha">Não lembrei</button>
-                <button className="fundo-amarela">Quase não lembrei</button>
-                <button className="fundo-verde">Zap!</button>
+                <button onClick={() => retornarCarta("cor-vermelho")} className="fundo-vermelha">Não lembrei</button>
+                <button onClick={() => retornarCarta("cor-amarelo")} className="fundo-amarela">Quase não lembrei</button>
+                <button onClick={() => retornarCarta("cor-verde")} className="fundo-verde">Zap!</button>
             </div>
         </section>
     )

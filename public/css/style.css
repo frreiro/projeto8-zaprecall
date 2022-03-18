@@ -2,13 +2,14 @@ body {
     background-color: #FB6B6B;
 }
 
-::-webkit-scrollbar{
+
+
+::-webkit-scrollbar {
     display: none;
 }
 
 .root {
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,14 +89,14 @@ main.tela-perguntas {
     margin-right: 4px;
 }
 
-.tela-perguntas section *{
+.tela-perguntas section * {
     font-family: Recursive;
 }
 
 .tela-perguntas section h1 {
     padding-left: 6px;
     padding-right: 6px;
-    
+
 }
 
 .tela-perguntas section.carta {
@@ -107,20 +108,31 @@ main.tela-perguntas {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    justify-content: space-between;
 
 }
 
 .tela-perguntas .carta h1 {
     font-weight: 700;
     font-size: 12px;
-    color: #333333;
+
+}
+
+.riscado {
+    text-decoration: line-through;
+}
+
+.tela-perguntas .carta ion-icon {
+    font-size: 20px;
+    margin-right: 12px;
+
 }
 
 
 
-.tela-perguntas section.carta-virada *{
+.tela-perguntas section.carta-virada * {
     font-size: 12px;
-    
+
 }
 
 
@@ -137,7 +149,7 @@ main.tela-perguntas {
 
 }
 
-.tela-perguntas .carta-virada h1{
+.tela-perguntas .carta-virada h1 {
     font-size: 12px;
     font-weight: 400;
     margin-top: 13px;
@@ -155,7 +167,7 @@ main.tela-perguntas {
     right: 8px;
 }
 
-.tela-perguntas .carta-virada div{
+.tela-perguntas .carta-virada div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -166,18 +178,19 @@ main.tela-perguntas {
 
 }
 
-.fundo-vermelha{
+.fundo-vermelha {
     background-color: #FF3030;
 }
-.fundo-amarela{
+
+.fundo-amarela {
     background: #FF922E;
 }
 
-.fundo-verde{
-    background: #2FBE34; 
+.fundo-verde {
+    background: #2FBE34;
 }
 
-.tela-perguntas .carta-virada div button{
+.tela-perguntas .carta-virada div button {
     width: 55px;
     height: 24px;
     font-size: 7px;
@@ -189,7 +202,7 @@ main.tela-perguntas {
 /* --- tela perguntas - footer --- */
 .tela-perguntas footer {
     width: 100vw;
-    height: 50px;
+    height: 60px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 
@@ -199,6 +212,7 @@ main.tela-perguntas {
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 
     font-family: Recursive;
@@ -206,25 +220,66 @@ main.tela-perguntas {
     color: #333333;
 }
 
-footer {
+.tela-perguntas footer h1 {
+    font-weight: 700;
+}
+
+.tela-perguntas footer h2 {
+    width: 131px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.tela-perguntas .section-final {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7px;
 }
 
-footer section{
+.tela-perguntas .section-final div {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-footer ion-icon{
-    font-size: 14px;
+
+
+.tela-perguntas .section-final img {
+    width: 18px;
+    height: 18px;
 }
 
-.cor-verde{
+
+.tela-perguntas .footer-final{
+    height: 112px;
+
+}
+
+
+footer section {
+    display: flex;
+    flex-direction: row;
+}
+
+footer ion-icon {
+    font-size: 20px;
+}
+
+.cor-verde {
     color: #2FBE34;
 }
-.cor-amarelo{
+
+.cor-amarelo {
     color: #FF922E;
 }
-.cor-vermelho{
+
+.cor-vermelho {
     color: #FF3030;
+}
+
+.cor-preto {
+    color: #333333;
 }

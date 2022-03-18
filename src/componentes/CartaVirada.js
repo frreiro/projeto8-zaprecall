@@ -1,8 +1,23 @@
-export default function CartaVirada() {
-    return (
-        <section className="carta-virada">
-            <h1>O que é JSX?</h1>
-            <img src="assets/setinha.png" />
-        </section>
-    )
+import React from "react";
+import CartaResposta from "./CartaResposta";
+
+export default function CartaVirada(props) {
+    const { pergunta, resposta, riscarCarta , retornarCarta} = props;
+
+    const [virado, setVirar] = React.useState(false);
+
+    if (virado) {
+        return (
+            <CartaResposta 
+            resposta={resposta} 
+            retornarCarta={retornarCarta}/>
+        )
+    } else {
+        return (
+            <section className="carta-virada">
+                <h1>{pergunta}</h1>
+                <img src="assets/setinha.png" onClick={() => setVirar(!virado)} />
+            </section>
+        )
+    }
 }
