@@ -1,3 +1,4 @@
+import setinha from "../assets/setinha.png"
 import React from "react";
 import CartaResposta from "./CartaResposta";
 
@@ -16,7 +17,7 @@ export default function CartaVirada(props) {
         return (
             <section className="carta-virada">
                 <h1>{pergunta}</h1>
-                <img src="assets/setinha.png" alt="virar" onClick={() => setVirar(!virada) } />
+                <img src={setinha} alt="virar" onClick={() => setVirar(!virada) } />
             </section>
         )
     }

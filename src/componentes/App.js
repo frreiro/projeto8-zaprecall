@@ -1,3 +1,4 @@
+
 import React from "react";
 import Inicar from "./Iniciar";
 import Perguntas from "./Perguntas";

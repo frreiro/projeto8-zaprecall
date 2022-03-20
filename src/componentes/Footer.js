@@ -1,3 +1,6 @@
+import party from  "../assets/party.png"
+import sad from  "../assets/sad.png"
+
 import React from "react"
 
 
@@ -23,7 +26,7 @@ export default function Footer(props) {
                     return (
                         <section className="section-final">
                             <div>
-                                <img src="assets/party.png" alt="feliz" />
+                                <img src={party} alt="feliz" />
                                 <h1>PARABÉNS!!</h1>
                             </div>
                             <h2>
@@ -35,7 +38,7 @@ export default function Footer(props) {
                     return (
                         <section className="section-final">
                             <div>
-                                <img src="assets/sad.png" alt="triste" />
+                                <img src={sad} alt="triste" />
                                 <h1>PUTZ!</h1>
                             </div>
                             <h2>
