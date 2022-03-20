@@ -2,11 +2,11 @@ import React from "react";
 import CartaResposta from "./CartaResposta";
 
 export default function CartaVirada(props) {
-    const { pergunta, resposta, riscarCarta , retornarCarta} = props;
+    const { pergunta, resposta , retornarCarta} = props;
 
-    const [virado, setVirar] = React.useState(false);
+    const [virada, setVirar] = React.useState(false);
 
-    if (virado) {
+    if (virada) {
         return (
             <CartaResposta 
             resposta={resposta} 
@@ -16,7 +16,7 @@ export default function CartaVirada(props) {
         return (
             <section className="carta-virada">
                 <h1>{pergunta}</h1>
-                <img src="assets/setinha.png" onClick={() => setVirar(!virado)} />
+                <img src="assets/setinha.png" alt="virar" onClick={() => setVirar(!virada) } />
             </section>
         )
     }

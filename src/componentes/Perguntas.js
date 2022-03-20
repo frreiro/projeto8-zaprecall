@@ -1,9 +1,8 @@
 import React from "react";
 import Carta from "./Carta";
-import CartaResposta from "./CartaResposta";
-import CartaVirada from "./CartaVirada";
 import Footer from "./Footer";
 import Header from "./Header";
+import Inicar from "./Iniciar";
 
 const reactPerguntas = [
     { question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript" },
@@ -16,14 +15,22 @@ const reactPerguntas = [
     { question: "Usamos estado (state) para __ ", answer: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" },
 ]
 
+
 export default function Perguntas() {
     
     const [cartasConcluidas, setCartasConcluidas] = React.useState(0);
-    const [totalCartas, setTotalCartas] = React.useState(reactPerguntas.length);
-    const [emoji, setEmoji] = React.useState("")
+    // const [totalCartas, setTotalCartas] = React.useState(reactPerguntas.length);
+    const [acertos,setAcertos] = React.useState(0);
+    const [footerIcones, setFooterIcones] = React.useState([])
+    let totalCartas = reactPerguntas.length;
 
-    
 
+    function embaralhar() { 
+        return Math.random() - 0.5; 
+    }
+
+    reactPerguntas.sort(embaralhar);
+ 
 
     return (
         <main className="tela-perguntas">
@@ -37,13 +44,18 @@ export default function Perguntas() {
                     resposta={answer}
                     cartasConcluidas={cartasConcluidas}
                     setCartasConcluidas={setCartasConcluidas}
-                    setEmoji={setEmoji}
+                    acertos={acertos}
+                    setAcertos={setAcertos}
+                    footerIcones={footerIcones}
+                    setFooterIcones={setFooterIcones}
                      />
             })}
             <Footer 
             cartasConcluidas={cartasConcluidas}
             totalCartas={totalCartas}
-            emoji={emoji} />
+            acertos={acertos} 
+            footerIcones={footerIcones}
+            />
         </main>
     )
 }

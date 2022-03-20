@@ -2,37 +2,60 @@ import React from "react"
 import CartaVirada from "./CartaVirada";
 
 
-// let cor = "cor-preto";
+
 
 export default function Carta(props) {
-    const { indice, pergunta, resposta, cartasConcluidas ,setCartasConcluidas,setEmoji } = props
+    const { indice, pergunta, resposta, cartasConcluidas ,setCartasConcluidas, setAcertos, acertos, footerIcones, setFooterIcones} = props
+
     const [selecionado, setSelecionado] = React.useState(false);
     const [riscado, setRiscado] = React.useState("");
-    const [cor, setCor] = React.useState("cor-preto")
+    const [icones, setIcones] = React.useState([{cor: "cor-preto", nome: "play-outline"}])
+
+
+    let ultimoIcone = icones[icones.length-1];
 
 
     function retornarCarta(novaCor) {
         setSelecionado(!selecionado)
         setRiscado("riscado")
-        setCor(novaCor)
         setCartasConcluidas(cartasConcluidas + 1)
-        setEmoji(novaCor)
+        verificarCor(novaCor);
+   
     }
 
-    function verificarRetorno() {
-        if (cor === "cor-vermelho") return <div className={cor}><ion-icon name="close-circle"></ion-icon></div>
-        if (cor === "cor-amarelo") return <div className={cor}><ion-icon name="help-circle"></ion-icon></div>
-        if (cor === "cor-verde") return <div className={cor}><ion-icon name="checkmark-circle"></ion-icon></div>
-        if (cor === "cor-preto") return <div className={cor}><ion-icon name="play-outline"></ion-icon></div>
+    function verificarCor(novaCor){
+        if (novaCor === "cor-vermelho") {
+            setIcones([...icones, {cor:novaCor, nome:"close-circle"}]);
+            setFooterIcones([...footerIcones, {cor:novaCor, nome:"close-circle"}])
+        }
+        if (novaCor === "cor-amarelo"){
+            setIcones([...icones, {cor:novaCor, nome:"help-circle"}]);
+            setFooterIcones([...footerIcones,{cor:novaCor, nome:"help-circle"}])
+            setAcertos(acertos + 1)
+        } 
+        if (novaCor === "cor-verde") {
+            setIcones([...icones, {cor:novaCor, nome:"checkmark-circle"}]);
+            setFooterIcones([...footerIcones, {cor:novaCor, nome:"checkmark-circle"}])
+            setAcertos(acertos + 1)
+        }
     }
+
+
+    function desvirarCarta(icone) {
+        const {cor, nome} = icone;
+        return <div className={cor}><ion-icon name={nome}></ion-icon></div>
+    }
+
+    
 
 
     if (!selecionado) {
         return (
-            <section className={`carta ${riscado} ${cor}`} onClick={() => setSelecionado(!selecionado)
+            <section className={`carta ${riscado} ${ultimoIcone.cor}`} onClick={
+                riscado != "riscado" ? () => setSelecionado(!selecionado) : ()=>""
             }>
-                <h1 className={cor}>{`Perguntas ${indice + 1}`}</h1>
-                {verificarRetorno()}
+                <h1 className={ultimoIcone.cor}>{`Pergunta ${indice + 1}`}</h1>
+                {desvirarCarta(ultimoIcone)}
             </section>
 
         )

@@ -1,13 +1,12 @@
+import React from "react";
 import Inicar from "./Iniciar";
 import Perguntas from "./Perguntas";
 
 
 function App() {
+    const [clicado, setClick] = React.useState(false);
     return (
-        <>
-        {/* <Inicar/> */}
-        <Perguntas />
-        </>
+        <>{clicado ? <Perguntas /> : <Inicar click={setClick} />}</>
     )
 }
 

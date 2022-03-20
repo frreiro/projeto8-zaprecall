@@ -18,50 +18,61 @@ body {
 
 /* --- tela inicial --- */
 .tela-inicial {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
 }
 
-.app-menu {
+.tela-inicial .app-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.app-menu img {
-    width: 55px;
-    height: 65px;
+.tela-inicial .app-menu img {
+    width: 136px;
+    height: 161px;
+    margin-bottom: 13px;
 }
 
-.app-menu h1 {
+.tela-inicial .app-menu h1 {
     color: #FFFFFF;
     font-family: 'Righteous', cursive;
-    font-size: 25px;
+    font-size: 36px;
     font-weight: 400;
 }
 
 .tela-inicial button {
 
-    width: 141px;
-    height: 31px;
+    width: 246px;
+    height: 54px;
     background: #FFFFFF;
     border: 1px solid #D70900;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     font-family: Recursive;
+    font-size: 18px;
     color: #D70900;
     margin-top: 73px;
 }
 
+
+
+
 /* --- tela perguntas */
+
+
+
 .tela-perguntas {
     width: 100vw;
-    /* height: calc(100vh - 50px); */
     position: relative;
+    margin-bottom: 171px;
 }
 
 main.tela-perguntas {
@@ -72,10 +83,12 @@ main.tela-perguntas {
     overflow: scroll;
 }
 
+/*  ---- header tela 2 */
 .tela-perguntas header {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 36px;
     font-family: 'Righteous', cursive;
     color: #FFFFFF;
     margin-top: 19px;
@@ -84,37 +97,39 @@ main.tela-perguntas {
 }
 
 .tela-perguntas header img {
-    width: 26px;
-    height: 30px;
-    margin-right: 4px;
+    width: 52px;
+    height: 60px;
+    margin-right: 10px;
 }
 
+/* ---- main tela 2 ---- */
+
 .tela-perguntas section * {
-    font-family: Recursive;
+    font-family: 'Recursive', sans-serif;
 }
 
 .tela-perguntas section h1 {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
 
 }
 
 .tela-perguntas section.carta {
-    width: 182px;
-    height: 40px;
+    width: 300px;
+    height: 65px;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     justify-content: space-between;
 
 }
 
 .tela-perguntas .carta h1 {
     font-weight: 700;
-    font-size: 12px;
+    font-size: 16px;
 
 }
 
@@ -123,34 +138,34 @@ main.tela-perguntas {
 }
 
 .tela-perguntas .carta ion-icon {
-    font-size: 20px;
-    margin-right: 12px;
+    font-size: 30px;
+    margin-right: 22px;
 
 }
 
 
 
 .tela-perguntas section.carta-virada * {
-    font-size: 12px;
+    font-size: 18px;
 
 }
 
 
 .tela-perguntas section.carta-virada {
-    width: 182px;
-    height: 80px;
+    width: 300px;
+    height: 131px;
     background-color: #FFFFD4;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 14px;
+    margin-bottom: 25px;
     position: relative;
 
 }
 
 .tela-perguntas .carta-virada h1 {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 400;
     margin-top: 13px;
     margin-bottom: 5px;
@@ -174,7 +189,7 @@ main.tela-perguntas {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 3px;
+    bottom: 6px;
 
 }
 
@@ -191,18 +206,20 @@ main.tela-perguntas {
 }
 
 .tela-perguntas .carta-virada div button {
-    width: 55px;
-    height: 24px;
-    font-size: 7px;
+    width: 85px;
+    height: 37px;
+    font-size: 12px;
     border-radius: 5px;
     border: none;
     color: #FFFFFF;
 }
 
 /* --- tela perguntas - footer --- */
+
+
 .tela-perguntas footer {
     width: 100vw;
-    height: 60px;
+    height: 70px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 
@@ -210,13 +227,14 @@ main.tela-perguntas {
     bottom: 0;
     left: 0;
 
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 
     font-family: Recursive;
-    font-size: 12px;
+    font-size: 18px;
     color: #333333;
 }
 
@@ -225,12 +243,14 @@ main.tela-perguntas {
 }
 
 .tela-perguntas footer h2 {
-    width: 131px;
+    width: 222px;
+    line-height: 21.6px;
     text-align: center;
     margin-bottom: 4px;
 }
 
 .tela-perguntas .section-final {
+    /* height: 171px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -248,13 +268,13 @@ main.tela-perguntas {
 
 
 .tela-perguntas .section-final img {
-    width: 18px;
-    height: 18px;
+    width: 23px;
+    height: 23px;
 }
 
 
-.tela-perguntas .footer-final{
-    height: 112px;
+.tela-perguntas .footer-final {
+    height: 171px;
 
 }
 
@@ -265,7 +285,7 @@ footer section {
 }
 
 footer ion-icon {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .cor-verde {
