@@ -28,11 +28,13 @@ body {
 
 }
 
+
 .tela-inicial .app-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .tela-inicial .app-menu img {
@@ -48,6 +50,22 @@ body {
     font-weight: 400;
 }
 
+
+.tela-inicial select {
+    width: 246px;
+    height: 43px;
+    border: none;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ADADAD;
+    padding: 10px;
+    margin-bottom: 18px;
+    outline: 0;
+}
+
 .tela-inicial button {
 
     width: 246px;
@@ -59,7 +77,7 @@ body {
     font-family: Recursive;
     font-size: 18px;
     color: #D70900;
-    margin-top: 73px;
+    /* margin-top: 73px; */
 }
 
 
@@ -216,6 +234,11 @@ main.tela-perguntas {
 
 /* --- tela perguntas - footer --- */
 
+footer *{
+    font-family: Recursive;
+
+}
+
 
 .tela-perguntas footer {
     width: 100vw;
@@ -233,7 +256,6 @@ main.tela-perguntas {
     flex-direction: column;
     align-items: center;
 
-    font-family: Recursive;
     font-size: 18px;
     color: #333333;
 }
@@ -250,7 +272,6 @@ main.tela-perguntas {
 }
 
 .tela-perguntas .section-final {
-    /* height: 171px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -274,10 +295,21 @@ main.tela-perguntas {
 
 
 .tela-perguntas .footer-final {
-    height: 171px;
+    height: 244px;
 
 }
 
+footer button {
+    width: 167px;
+    height: 32px;
+    background: #FB6B6B;
+    border-radius: 5px;
+    border: none;
+
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 4px;
+}
 
 footer section {
     display: flex;

@@ -6,8 +6,12 @@ import Perguntas from "./Perguntas";
 
 function App() {
     const [clicado, setClick] = React.useState(false);
+    const [deck, setDeck] = React.useState("")
+
     return (
-        <>{clicado ? <Perguntas /> : <Inicar click={setClick} />}</>
+        <>
+            {clicado ?   <Perguntas deck={deck} /> : <Inicar click={setClick} setDeck={setDeck} />}
+        </>
     )
 }
 
