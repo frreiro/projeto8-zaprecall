@@ -72,7 +72,6 @@ export default function Footer(props) {
             <section>
                 {retornarIcones(footerIcones)}
             </section>
-            {jogadas.concluidas === totalCartas ? <button onClick={()=>window.location.reload(false)}>REINICIAR RECALL</button> : ""}
         </footer>
     )
 }
